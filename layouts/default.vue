@@ -1,8 +1,10 @@
 <script setup></script>
 <template>
   <div>
-    <header style="background: #222; color: #fff; padding: 1rem;">
-      <h1>Mi Tienda de Corbatas</h1>
+    <header class="header-custom">
+      <div class="logo-container">
+        <img src="/logo-bg.jpg" alt="Logo Quilino Reyes" class="logo-header" />
+      </div>
       <nav>
         <NuxtLink to="/">Inicio</NuxtLink> |
         <NuxtLink to="/modahombre">Moda Hombre</NuxtLink> |
@@ -13,8 +15,87 @@
     <main>
       <NuxtPage />
     </main>
-    <footer style="background: #222; color: #fff; padding: 1rem; margin-top: 2rem;">
-      <p>&copy; 2025 Mi Tienda de Corbatas</p>
+    <footer class="footer-custom">
+      <p>&copy; 2025 Quilino Reyes · Moda Masculina</p>
     </footer>
   </div>
 </template>
+
+<style scoped>
+.header-custom {
+  background: #181818;
+  color: goldenrod;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 4px solid goldenrod;
+  opacity: 0.97;
+  height: 110px;
+  min-height: 110px;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.logo-header {
+  height: 100%;
+  max-height: 110px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  border: none;
+}
+nav {
+  font-size: 1.3rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+nav a {
+  color: goldenrod;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #fff;
+}
+.footer-custom {
+  background: #181818;
+  color: goldenrod;
+  padding: 2rem 1rem 2rem 1rem;
+  text-align: center;
+  border-top: 4px solid goldenrod;
+  margin-top: 0;
+  opacity: 0.97;
+  width: 100vw;
+  position: static;
+}
+body, html, #__nuxt, #__layout, .home-bg {
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  background: none;
+}
+.home-bg {
+  background: #181818 url('/logo-bg.jpg') repeat center center fixed;
+  background-size: 500px auto;
+  color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+</style>
