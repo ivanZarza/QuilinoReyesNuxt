@@ -11,7 +11,7 @@
       </nav>
     </header>
     <main>
-      <slot />
+      <NuxtPage />
     </main>
     <footer style="background: #222; color: #fff; padding: 1rem; margin-top: 2rem;">
       <p>&copy; 2025 Mi Tienda de Corbatas</p>
