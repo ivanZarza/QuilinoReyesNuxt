@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <div>
+  <div class="main-bg">
     <header class="header-custom">
       <div class="logo-container">
         <img src="/logo-bg.jpg" alt="Logo Quilino Reyes" class="logo-header" />
@@ -12,7 +12,7 @@
         <NuxtLink to="/corbatashombre">Corbatas Hombre</NuxtLink>
       </nav>
     </header>
-    <main>
+    <main class="main-content">
       <NuxtPage />
     </main>
     <footer class="footer-custom">
@@ -22,6 +22,22 @@
 </template>
 
 <style scoped>
+.main-bg {
+  min-height: 100vh;
+  background: #181818 url('/logo-bg.jpg') repeat center center fixed;
+  background-size: 450px auto;
+  color: goldenrod;
+  display: flex;
+  flex-direction: column;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.main-content {
+  flex: 1 1 auto;
+  min-height: 1px;
+  display: flex;
+  flex-direction: column;
+}
 .header-custom {
   background: #181818;
   color: goldenrod;
@@ -80,22 +96,13 @@ nav a:hover {
   width: 100vw;
   position: static;
 }
-body, html, #__nuxt, #__layout, .home-bg {
+body, html, #__nuxt, #__layout {
   min-height: 100vh;
   height: 100%;
   margin: 0;
   padding: 0;
   border: none;
   box-sizing: border-box;
-  background: none;
-}
-.home-bg {
-  background: #181818 url('/logo-bg.jpg') repeat center center fixed;
-  background-size: 500px auto;
-  color: goldenrod;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  background: #181818 !important;
 }
 </style>

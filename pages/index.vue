@@ -2,7 +2,7 @@
 // No se requiere lógica JS para la presentación
 </script>
 <template>
-  <div class="home-bg">
+  <div>
     <div class="presentacion">
       <div class="personal-container">
         <img src="/personal.jpg" class="personal" alt="Imagen de presentación" />
@@ -39,17 +39,6 @@
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap');
 
-.home-bg {
-  min-height: 100vh;
-  background: #181818 url('/logo-bg.jpg') repeat center center fixed;
-  background-size: 60px auto;
-  color: goldenrod;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: 'Montserrat', Arial, sans-serif;
-}
 .presentacion {
   width: 90%;
   max-width: 900px;
@@ -125,8 +114,9 @@
   max-width: 900px;
   height: 2px;
   background: linear-gradient(90deg, transparent, goldenrod, transparent);
-  margin: 2rem 0 1rem 0;
+  margin: 2rem auto 1rem auto;
   border-radius: 2px;
+  display: block;
 }
 .footer {
   padding: 30px 0 60px 0;
