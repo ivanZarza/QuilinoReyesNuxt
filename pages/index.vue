@@ -18,7 +18,9 @@
           Os presento mi primera colección en la cual fusiono El Arte, La Cultura y El Flamenco. Tres características que
           me identifican por completo.
         </p>
-        <button class="btn-gold">Ver colección</button>
+        <button class="btn-gold" @click="$router.push('/corbatashombre')">Corbatas Hombre</button>
+        <button class="btn-gold" @click="$router.push('/modahombre')">Moda Hombre</button>
+        <button class="btn-gold" @click="$router.push('/modamujer')">Moda Mujer</button>
       </div>
     </div>
     <div class="divider"></div>
@@ -56,15 +58,13 @@
   width: 100%;
 }
 .personal {
-  width: 300px;
+  width: 420px;
   height: auto;
   object-fit: cover;
-/*   border-radius: 50%; */
   border: 3px solid goldenrod;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.5);
   background-color: black;
-  margin-bottom: 1.5rem;
-  transition: box-shadow 0.3s;
+  display: block;
 }
 .personal:hover {
   box-shadow: 0 8px 32px 0 rgba(218,165,32,0.3);
@@ -92,6 +92,8 @@
 }
 .btn-gold {
   margin-top: 1.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
   background: goldenrod;
   color: #181818;
   border: none;
@@ -103,6 +105,10 @@
   box-shadow: 0 2px 8px 0 rgba(218,165,32,0.15);
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   letter-spacing: 1px;
+  display: inline-block;
+}
+.btn-gold:last-child {
+  margin-right: 0;
 }
 .btn-gold:hover {
   background: #fff;
@@ -165,6 +171,8 @@
   .presentacion {
     width: 98%;
     gap: 1.2rem;
+    flex-direction: column;
+    align-items: center;
   }
   .personal {
     width: 120px;
@@ -177,19 +185,26 @@
   .text-center {
     font-size: 1.5rem;
   }
+  .btn-gold {
+    display: block;
+    width: 90%;
+    margin: 1rem auto 0.5rem auto;
+  }
 }
+
 @media (max-width: 600px) {
   .presentacion {
     width: 100%;
     gap: 0.7rem;
   }
   .personal {
-    width: 90px;
-    height: 90px;
+    width: 60%;
+    height: auto;
   }
   .texto {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0.7rem 0.3rem 0.7rem 0.3rem;
+    width: 90%;
   }
   .text-center {
     font-size: 1.1rem;
@@ -197,6 +212,12 @@
   .footer-texto {
     font-size: 0.9rem;
     padding: 10px;
+  }
+  .btn-gold {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+    margin: 0.7rem 0 0 0;
   }
 }
 </style>

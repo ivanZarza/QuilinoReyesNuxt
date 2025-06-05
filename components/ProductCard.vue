@@ -10,15 +10,15 @@
     </div>
     <div v-if="showGallery" class="modal-overlay" @click.self="closeGallery">
       <div class="modal-gallery">
-        <button class="close-btn" @click="closeGallery">&times;</button>
+        <!-- <button class="close-btn" @click="closeGallery">&times;</button> -->
         <div class="gallery-main">
           <img :src="fotos[galleryIndex]" :alt="nombre" />
         </div>
         <div class="gallery-thumbs">
           <img v-for="(foto, idx) in fotos" :key="idx" :src="foto" :alt="nombre + ' miniatura ' + idx" :class="{active: idx === galleryIndex}" @click.stop="galleryIndex = idx" />
         </div>
-        <button class="nav-btn left" @click.stop="prevImage">&#8592;</button>
-        <button class="nav-btn right" @click.stop="nextImage">&#8594;</button>
+        <!-- <button class="nav-btn left" @click.stop="prevImage">&#8592;</button>
+        <button class="nav-btn right" @click.stop="nextImage">&#8594;</button> -->
       </div>
     </div>
   </div>
@@ -123,7 +123,7 @@ function nextImage() {
   border: 2px solid goldenrod;
   border-radius: 18px;
   padding: 2rem 2rem 1.2rem 2rem;
-  box-shadow: 0 8px 32px 0 rgba(218,165,32,0.25);
+  box-shadow: none;
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
@@ -133,13 +133,17 @@ function nextImage() {
 }
 .close-btn {
   position: absolute;
-  top: 10px; right: 18px;
+  top: 12px; /* Entre los dos recuadros */
+  right: 18px; /* Arriba a la derecha */
+  left: auto;
   background: none;
   border: none;
   color: goldenrod;
   font-size: 2.2rem;
   cursor: pointer;
   z-index: 2;
+  /* Ajuste visual para que quede entre el borde exterior y el recuadro de la imagen */
+  transform: translateY(-50%);
 }
 .gallery-main {
   width: 60vw;
