@@ -219,5 +219,5 @@
     padding: 0.7rem 0;
     margin: 0.7rem 0 0 0; 
   }
-}
+} 
 </style>
